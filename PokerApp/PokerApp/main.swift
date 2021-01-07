@@ -7,10 +7,20 @@
 
 import Foundation
 
-let card = Card(shape: .heart, number: .queen)
-let card2 = Card(shape: .spade, number: .seven)
-let card3 = Card(shape: .diamond, number: .six)
+var deck = Deck()
+print("> 카드 초기화")
+print("카드 전체를 초기화했습니다.")
+print("총 \(deck.count())장의 카드가 있습니다.")
+print()
 
-card.printCard()
-card2.printCard()
-card3.printCard()
+print("> 카드 섞기")
+deck.shuffle()
+print("전체 \(deck.count())장의 카드를 섞었습니다.")
+print()
+
+for _ in 0...2 {
+    print("> 카드 하나 뽑기")
+    print(deck.removeOne() ?? "카드가 없습니다")
+    print("총 \(deck.count())장의 카드가 남아있습니다.")
+    print()
+}
