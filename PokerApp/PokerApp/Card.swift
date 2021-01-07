@@ -9,18 +9,20 @@
 import Foundation
 
 class Card {
-    private var shape : Shapes, number : Numbers
+    var shape : Shapes, number : Numbers
     init (shape : Shapes, number : Numbers){
         self.shape = shape
         self.number = number
     }
     
-    // 1차 과제에서 배운거 써먹기
+    // enum이 쓰기 쉬워서..
     enum Shapes : String {
         case spade = "♠"
         case heart = "♥"
         case diamond = "◆"
         case club = "♣"
+
+        static let shapes = [spade, heart, diamond, club]
     }
     
     enum Numbers : String {
@@ -37,7 +39,10 @@ class Card {
         case eleven = "J"
         case twelve = "Q"
         case thirteen = "K"
+
+        static let numbers = [ace, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen]
     }
+    
     
     var description : String {
            return "\(self.shape.rawValue)\(self.number.rawValue)"

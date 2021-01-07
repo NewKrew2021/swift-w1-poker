@@ -8,4 +8,5 @@
 
 import Foundation
 
-print("main")
+
+print("qwqeqwe")

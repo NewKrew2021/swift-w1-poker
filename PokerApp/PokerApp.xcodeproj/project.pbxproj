@@ -12,6 +12,9 @@
 		C7D4FC2425A5AB0E0017F616 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC1125A59B640017F616 /* main.swift */; };
 		C7D4FC2925A5AE890017F616 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC2825A5AE890017F616 /* Card.swift */; };
 		C7D4FC2A25A5AE890017F616 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC2825A5AE890017F616 /* Card.swift */; };
+		C7D4FC2C25A691FD0017F616 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC2B25A691FD0017F616 /* CardDeck.swift */; };
+		C7D4FC2D25A691FD0017F616 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC2B25A691FD0017F616 /* CardDeck.swift */; };
+		C7D4FC3525A6F0760017F616 /* CardDeck_Init_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC3425A6F0760017F616 /* CardDeck_Init_Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +36,10 @@
 		C7D4FC1E25A5AAEC0017F616 /* Card_Generate_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card_Generate_Test.swift; sourceTree = "<group>"; };
 		C7D4FC2025A5AAEC0017F616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7D4FC2825A5AE890017F616 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C7D4FC2B25A691FD0017F616 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
+		C7D4FC3225A6F0760017F616 /* CardDeck_Init_Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardDeck_Init_Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7D4FC3425A6F0760017F616 /* CardDeck_Init_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck_Init_Test.swift; sourceTree = "<group>"; };
+		C7D4FC3625A6F0760017F616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +57,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C7D4FC2F25A6F0760017F616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +72,7 @@
 			children = (
 				C7D4FC1025A59B640017F616 /* PokerApp */,
 				C7D4FC1D25A5AAEC0017F616 /* Card_Generate_Test */,
+				C7D4FC3325A6F0760017F616 /* CardDeck_Init_Test */,
 				C7D4FC0F25A59B640017F616 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +82,7 @@
 			children = (
 				C7D4FC0E25A59B640017F616 /* PokerApp */,
 				C7D4FC1C25A5AAEC0017F616 /* Card_Generate_Test.xctest */,
+				C7D4FC3225A6F0760017F616 /* CardDeck_Init_Test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +92,7 @@
 			children = (
 				C7D4FC1125A59B640017F616 /* main.swift */,
 				C7D4FC2825A5AE890017F616 /* Card.swift */,
+				C7D4FC2B25A691FD0017F616 /* CardDeck.swift */,
 			);
 			path = PokerApp;
 			sourceTree = "<group>";
@@ -87,6 +104,15 @@
 				C7D4FC2025A5AAEC0017F616 /* Info.plist */,
 			);
 			path = Card_Generate_Test;
+			sourceTree = "<group>";
+		};
+		C7D4FC3325A6F0760017F616 /* CardDeck_Init_Test */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4FC3425A6F0760017F616 /* CardDeck_Init_Test.swift */,
+				C7D4FC3625A6F0760017F616 /* Info.plist */,
+			);
+			path = CardDeck_Init_Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +152,23 @@
 			productReference = C7D4FC1C25A5AAEC0017F616 /* Card_Generate_Test.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C7D4FC3125A6F0760017F616 /* CardDeck_Init_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7D4FC3725A6F0760017F616 /* Build configuration list for PBXNativeTarget "CardDeck_Init_Test" */;
+			buildPhases = (
+				C7D4FC2E25A6F0760017F616 /* Sources */,
+				C7D4FC2F25A6F0760017F616 /* Frameworks */,
+				C7D4FC3025A6F0760017F616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardDeck_Init_Test;
+			productName = CardDeck_Init_Test;
+			productReference = C7D4FC3225A6F0760017F616 /* CardDeck_Init_Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,6 +183,9 @@
 						CreatedOnToolsVersion = 11.7;
 					};
 					C7D4FC1B25A5AAEC0017F616 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					C7D4FC3125A6F0760017F616 = {
 						CreatedOnToolsVersion = 11.7;
 					};
 				};
@@ -159,12 +205,20 @@
 			targets = (
 				C7D4FC0D25A59B640017F616 /* PokerApp */,
 				C7D4FC1B25A5AAEC0017F616 /* Card_Generate_Test */,
+				C7D4FC3125A6F0760017F616 /* CardDeck_Init_Test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C7D4FC1A25A5AAEC0017F616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7D4FC3025A6F0760017F616 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -178,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D4FC2C25A691FD0017F616 /* CardDeck.swift in Sources */,
 				C7D4FC1225A59B640017F616 /* main.swift in Sources */,
 				C7D4FC2925A5AE890017F616 /* Card.swift in Sources */,
 			);
@@ -189,7 +244,16 @@
 			files = (
 				C7D4FC2425A5AB0E0017F616 /* main.swift in Sources */,
 				C7D4FC2A25A5AE890017F616 /* Card.swift in Sources */,
+				C7D4FC2D25A691FD0017F616 /* CardDeck.swift in Sources */,
 				C7D4FC1F25A5AAEC0017F616 /* Card_Generate_Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7D4FC2E25A6F0760017F616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7D4FC3525A6F0760017F616 /* CardDeck_Init_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +431,42 @@
 			};
 			name = Release;
 		};
+		C7D4FC3825A6F0760017F616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SFNDY59DA9;
+				INFOPLIST_FILE = CardDeck_Init_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.CardDeck-Init-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C7D4FC3925A6F0760017F616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SFNDY59DA9;
+				INFOPLIST_FILE = CardDeck_Init_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.CardDeck-Init-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -393,6 +493,15 @@
 			buildConfigurations = (
 				C7D4FC2225A5AAEC0017F616 /* Debug */,
 				C7D4FC2325A5AAEC0017F616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7D4FC3725A6F0760017F616 /* Build configuration list for PBXNativeTarget "CardDeck_Init_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7D4FC3825A6F0760017F616 /* Debug */,
+				C7D4FC3925A6F0760017F616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
