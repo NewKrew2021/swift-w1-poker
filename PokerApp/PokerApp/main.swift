@@ -9,4 +9,7 @@ import Foundation
 
 var deck = Deck()
 
-deck.reset()
+deck.shuffle()
+deck.removeOne()
+deck.removeOne()
+deck.removeOne()

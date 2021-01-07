@@ -12,7 +12,7 @@ struct Deck {
     // 클래스 메모리 관리 방식에 대해 학습한다. reset() 할때 이전에 만든 카드 객체는 어떻게 되는지 확인한다.
     // --> ARC로 인해 메모리가 자동적으로 해제된다.
     
-    var cards : [Card] = [Card]()
+    private var cards : [Card] = [Card]()
     
     init() {
         reset()
@@ -41,7 +41,7 @@ struct Deck {
             print("현재 카드가 없습니다.")
             return nil
         } else {
-            self.cards.last?.printCard()
+            print(self.cards.last?.description ?? "현재 카드가 없습니다.")
             print("총 \(self.count() - 1)장의 카드가 남아있습니다.")
             return self.cards.removeLast()
         }
