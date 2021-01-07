@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3267126025A56E89006434AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267125F25A56E89006434AB /* main.swift */; };
 		3267126825A57260006434AB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267126725A57260006434AB /* Card.swift */; };
+		32F7F07125A5D90F00D15C37 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F7F07025A5D90E00D15C37 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		3267125C25A56E89006434AB /* PokerApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PokerApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		3267125F25A56E89006434AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3267126725A57260006434AB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		32F7F07025A5D90E00D15C37 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				3267125F25A56E89006434AB /* main.swift */,
 				3267126725A57260006434AB /* Card.swift */,
+				32F7F07025A5D90E00D15C37 /* Deck.swift */,
 			);
 			path = PokerApp;
 			sourceTree = "<group>";
@@ -122,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F7F07125A5D90F00D15C37 /* Deck.swift in Sources */,
 				3267126025A56E89006434AB /* main.swift in Sources */,
 				3267126825A57260006434AB /* Card.swift in Sources */,
 			);
