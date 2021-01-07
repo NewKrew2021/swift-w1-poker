@@ -15,6 +15,8 @@
 		C7D4FC2C25A691FD0017F616 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC2B25A691FD0017F616 /* CardDeck.swift */; };
 		C7D4FC2D25A691FD0017F616 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC2B25A691FD0017F616 /* CardDeck.swift */; };
 		C7D4FC3525A6F0760017F616 /* CardDeck_Init_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC3425A6F0760017F616 /* CardDeck_Init_Test.swift */; };
+		C7D4FC3B25A7403E0017F616 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC3A25A7403E0017F616 /* Player.swift */; };
+		C7D4FC3C25A7403E0017F616 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4FC3A25A7403E0017F616 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,7 @@
 		C7D4FC3225A6F0760017F616 /* CardDeck_Init_Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardDeck_Init_Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D4FC3425A6F0760017F616 /* CardDeck_Init_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck_Init_Test.swift; sourceTree = "<group>"; };
 		C7D4FC3625A6F0760017F616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7D4FC3A25A7403E0017F616 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 				C7D4FC1125A59B640017F616 /* main.swift */,
 				C7D4FC2825A5AE890017F616 /* Card.swift */,
 				C7D4FC2B25A691FD0017F616 /* CardDeck.swift */,
+				C7D4FC3A25A7403E0017F616 /* Player.swift */,
 			);
 			path = PokerApp;
 			sourceTree = "<group>";
@@ -232,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D4FC3B25A7403E0017F616 /* Player.swift in Sources */,
 				C7D4FC2C25A691FD0017F616 /* CardDeck.swift in Sources */,
 				C7D4FC1225A59B640017F616 /* main.swift in Sources */,
 				C7D4FC2925A5AE890017F616 /* Card.swift in Sources */,
@@ -245,6 +250,7 @@
 				C7D4FC2425A5AB0E0017F616 /* main.swift in Sources */,
 				C7D4FC2A25A5AE890017F616 /* Card.swift in Sources */,
 				C7D4FC2D25A691FD0017F616 /* CardDeck.swift in Sources */,
+				C7D4FC3C25A7403E0017F616 /* Player.swift in Sources */,
 				C7D4FC1F25A5AAEC0017F616 /* Card_Generate_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

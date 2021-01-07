@@ -12,7 +12,7 @@ import Foundation
 class CardDeck {
     
     private var cards = [Card]()
-    private var pickCards = [Card]()
+    private var selectCards = [Card]()
     
     init() {
         for shape in Card.Shapes.shapes {
@@ -30,20 +30,18 @@ class CardDeck {
     
     func shuffle() -> [Card] {
         for i in 0..<cards.count {
-            let randomCard: Int = Int(arc4random_uniform(UInt32(cards.count-1)))
-            guard i != randomCard else { continue }
-            self.cards.swapAt(i, randomCard)
+            let j: Int = Int.random(in: 0..<self.cards.count)
+            if i != j { self.cards.swapAt(i, j)}
         }
         //print("> 카드 섞기\n전체 \(self.cards.count)장의 카드를 섞었습니다.")
         return self.cards
     }
     
-    func removeOne() -> (basic: [Card], pick: Card) {
-        let randomCard: UInt32 = arc4random_uniform(UInt32(cards.count-1))
-        let removeCard = self.cards.remove(at: Int(randomCard))
-        pickCards.append(removeCard)
+    func removeOne() -> Card {
+        let removeCard = self.cards.remove(at: Int.random(in: 0..<self.cards.count))
+        selectCards.append(removeCard)
         //print("> 카드 하나 뽑기\n\(removeCard.shape)\(removeCard.number)\n총 \(self.cards.count)장의 카드가 남아있습니다.")
-        return (self.cards, removeCard)
+        return removeCard 
     }
     
     func reset() -> [Card] {

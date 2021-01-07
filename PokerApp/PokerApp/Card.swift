@@ -43,9 +43,11 @@ class Card {
         static let numbers = [ace, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen]
     }
     
-    
+    //func == (shape : shape, number : number) -> bool {
+     //   return (self.shape == shape && self.number == self.number)
+    //}
     var description : String {
-           return "\(self.shape.rawValue)\(self.number.rawValue)"
-       }
+        return self.shape.rawValue + self.number.rawValue
+    }
 }
 
