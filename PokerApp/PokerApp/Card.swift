@@ -40,11 +40,18 @@ class Card {
         self.number = number
     }
     
+    /*
     public func printCard() {
         print("\(self.shape.rawValue)\(self.number)")
     }
     
-    deinit {
-        print("\(self.shape.rawValue)\(self.number) 해제됨")
+    
+    func getInfo() -> String {
+        return "\(self.shape.rawValue)\(self.number)"
+    }
+    */
+ 
+    var description: String {
+        return "\(self.shape.rawValue)\(self.number)"
     }
 }
