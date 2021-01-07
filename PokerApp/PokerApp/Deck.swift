@@ -24,25 +24,19 @@ struct Deck {
     
     // Fisher-Yates shuffle 알고리즘
     mutating func shuffle() {
-        print("> 카드 섞기")
-        for i in 0..<self.cards.count - 1 { // 0 ~ n-2
+        for i in 0..<self.cards.count - 1 {
             let randomIndex = Int.random(in: i..<self.cards.count)
             
             let temp = self.cards[i]
             self.cards[i] = self.cards[randomIndex]
             self.cards[randomIndex] = temp
         }
-        print("전체 \(self.count())장의 카드를 섞었습니다.")
     }
     
     mutating func removeOne() -> Card? {
-        print("> 카드 하나 뽑기")
         if self.count() == 0 {
-            print("현재 카드가 없습니다.")
             return nil
         } else {
-            print(self.cards.last?.description ?? "현재 카드가 없습니다.")
-            print("총 \(self.count() - 1)장의 카드가 남아있습니다.")
             return self.cards.removeLast()
         }
     }
@@ -61,8 +55,5 @@ struct Deck {
                 self.cards.append(Card(shape: shape, number: number))
             }
         }
-        print("> 카드 초기화")
-        print("카드 전체를 초기화했습니다.")
-        print("총 \(self.count())장의 카드가 있습니다.")
     }
 }

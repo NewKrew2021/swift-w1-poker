@@ -25,7 +25,18 @@ class DeckTest: XCTestCase {
     
     func testShuffle() throws {
         var deck = Deck()
+        var compareDeck = Deck()
         deck.shuffle()
+        let cnt = deck.count()
+        var shuffle = false
+        for _ in 0...cnt-1 {
+            if String(describing:deck.removeOne()) != String(describing:compareDeck.removeOne()) {
+                shuffle = true
+                break
+            }
+        }
+        
+        XCTAssertTrue(shuffle)
     }
     
     func testRemoveOne() throws {

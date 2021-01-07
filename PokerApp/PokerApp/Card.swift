@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Card {
+class Card: CustomStringConvertible {
     
     // 스페이드, 하트 , 다이아, 클로버 네개의 데이터를 열거형으로 정리하기 좋다고 판단해서 enum을 선택하였다.
     enum Shape: Character, CaseIterable {
@@ -15,7 +15,7 @@ class Card {
     }
     
     // 처음엔 (Int, String)형 딕셔너리로 구현을 하려고 했는데 1부터 13이라는 한정된 범위의 데이터이기 때문에 enum으로 구현하였다.
-    // enum의 타입을 String으로 하려고 했지만 추후에 카드의 대소비교가 어려울것같아서 Int형으로 두고 CustomStringConvertible이라는 프로토콜을 사용gkdu
+    // enum의 타입을 String으로 하려고 했지만 추후에 카드의 대소비교가 어려울것같아서 Int형으로 두고 CustomStringConvertible이라는 프로토콜을 사용하여
     // 인스턴스를 문자열로 변환해주었다.
     enum Number: Int, CustomStringConvertible, CaseIterable {
         case joker = 0, ace, two, three, four, five, six, seven, eight, nine, ten, jack, queen, king
@@ -39,19 +39,9 @@ class Card {
         self.shape = shape
         self.number = number
     }
-    
-    /*
-    public func printCard() {
-        print("\(self.shape.rawValue)\(self.number)")
-    }
-    
-    
-    func getInfo() -> String {
-        return "\(self.shape.rawValue)\(self.number)"
-    }
-    */
  
     var description: String {
         return "\(self.shape.rawValue)\(self.number)"
     }
+
 }
