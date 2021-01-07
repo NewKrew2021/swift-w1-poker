@@ -10,3 +10,5 @@ import Foundation
 var deck = Deck()
 
 deck.reset()
+
+// 제발
