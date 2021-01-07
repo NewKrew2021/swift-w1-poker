@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F7FA6F8125A55790009532C7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6F8025A55790009532C7 /* main.swift */; };
-		F7FA6FC225A6047F009532C7 /* DeckTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FC125A6047F009532C7 /* DeckTest.swift */; };
-		F7FA6FC925A6048A009532C7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6F8025A55790009532C7 /* main.swift */; };
+		F7FA6FE025A6A3C7009532C7 /* DeckTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FDF25A6A3C7009532C7 /* DeckTest.swift */; };
+		F7FA6FE725A6A3E5009532C7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6F8025A55790009532C7 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,9 +27,9 @@
 /* Begin PBXFileReference section */
 		F7FA6F7D25A55790009532C7 /* PokerApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PokerApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FA6F8025A55790009532C7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		F7FA6FBF25A6047F009532C7 /* DeckTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeckTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7FA6FC125A6047F009532C7 /* DeckTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTest.swift; sourceTree = "<group>"; };
-		F7FA6FC325A6047F009532C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7FA6FDD25A6A3C7009532C7 /* DeckTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeckTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7FA6FDF25A6A3C7009532C7 /* DeckTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTest.swift; sourceTree = "<group>"; };
+		F7FA6FE125A6A3C7009532C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +40,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7FA6FBC25A6047F009532C7 /* Frameworks */ = {
+		F7FA6FDA25A6A3C7009532C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				F7FA6F7F25A55790009532C7 /* PokerApp */,
-				F7FA6FC025A6047F009532C7 /* DeckTest */,
+				F7FA6FDE25A6A3C7009532C7 /* DeckTest */,
 				F7FA6F7E25A55790009532C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				F7FA6F7D25A55790009532C7 /* PokerApp */,
-				F7FA6FBF25A6047F009532C7 /* DeckTest.xctest */,
+				F7FA6FDD25A6A3C7009532C7 /* DeckTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,11 +76,11 @@
 			path = PokerApp;
 			sourceTree = "<group>";
 		};
-		F7FA6FC025A6047F009532C7 /* DeckTest */ = {
+		F7FA6FDE25A6A3C7009532C7 /* DeckTest */ = {
 			isa = PBXGroup;
 			children = (
-				F7FA6FC125A6047F009532C7 /* DeckTest.swift */,
-				F7FA6FC325A6047F009532C7 /* Info.plist */,
+				F7FA6FDF25A6A3C7009532C7 /* DeckTest.swift */,
+				F7FA6FE125A6A3C7009532C7 /* Info.plist */,
 			);
 			path = DeckTest;
 			sourceTree = "<group>";
@@ -105,13 +105,13 @@
 			productReference = F7FA6F7D25A55790009532C7 /* PokerApp */;
 			productType = "com.apple.product-type.tool";
 		};
-		F7FA6FBE25A6047F009532C7 /* DeckTest */ = {
+		F7FA6FDC25A6A3C7009532C7 /* DeckTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7FA6FC425A6047F009532C7 /* Build configuration list for PBXNativeTarget "DeckTest" */;
+			buildConfigurationList = F7FA6FE425A6A3DA009532C7 /* Build configuration list for PBXNativeTarget "DeckTest" */;
 			buildPhases = (
-				F7FA6FBB25A6047F009532C7 /* Sources */,
-				F7FA6FBC25A6047F009532C7 /* Frameworks */,
-				F7FA6FBD25A6047F009532C7 /* Resources */,
+				F7FA6FD925A6A3C7009532C7 /* Sources */,
+				F7FA6FDA25A6A3C7009532C7 /* Frameworks */,
+				F7FA6FDB25A6A3C7009532C7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -119,7 +119,7 @@
 			);
 			name = DeckTest;
 			productName = DeckTest;
-			productReference = F7FA6FBF25A6047F009532C7 /* DeckTest.xctest */;
+			productReference = F7FA6FDD25A6A3C7009532C7 /* DeckTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					F7FA6F7C25A55790009532C7 = {
 						CreatedOnToolsVersion = 12.3;
 					};
-					F7FA6FBE25A6047F009532C7 = {
+					F7FA6FDC25A6A3C7009532C7 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -153,13 +153,13 @@
 			projectRoot = "";
 			targets = (
 				F7FA6F7C25A55790009532C7 /* PokerApp */,
-				F7FA6FBE25A6047F009532C7 /* DeckTest */,
+				F7FA6FDC25A6A3C7009532C7 /* DeckTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F7FA6FBD25A6047F009532C7 /* Resources */ = {
+		F7FA6FDB25A6A3C7009532C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,12 +177,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7FA6FBB25A6047F009532C7 /* Sources */ = {
+		F7FA6FD925A6A3C7009532C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7FA6FC925A6048A009532C7 /* main.swift in Sources */,
-				F7FA6FC225A6047F009532C7 /* DeckTest.swift in Sources */,
+				F7FA6FE725A6A3E5009532C7 /* main.swift in Sources */,
+				F7FA6FE025A6A3C7009532C7 /* DeckTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +322,7 @@
 			};
 			name = Release;
 		};
-		F7FA6FC525A6047F009532C7 /* Debug */ = {
+		F7FA6FE225A6A3C7009532C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -339,7 +339,7 @@
 			};
 			name = Debug;
 		};
-		F7FA6FC625A6047F009532C7 /* Release */ = {
+		F7FA6FE325A6A3C7009532C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -377,11 +377,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7FA6FC425A6047F009532C7 /* Build configuration list for PBXNativeTarget "DeckTest" */ = {
+		F7FA6FE425A6A3DA009532C7 /* Build configuration list for PBXNativeTarget "DeckTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7FA6FC525A6047F009532C7 /* Debug */,
-				F7FA6FC625A6047F009532C7 /* Release */,
+				F7FA6FE225A6A3C7009532C7 /* Debug */,
+				F7FA6FE325A6A3C7009532C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

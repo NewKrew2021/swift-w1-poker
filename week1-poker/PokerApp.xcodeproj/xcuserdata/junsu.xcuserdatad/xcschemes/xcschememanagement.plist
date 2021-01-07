@@ -6,15 +6,11 @@
 	<dict>
 		<key>DeckTest.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>PokerApp.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
@@ -31,7 +27,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7FA6FBE25A6047F009532C7</key>
+		<key>F7FA6FDC25A6A3C7009532C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

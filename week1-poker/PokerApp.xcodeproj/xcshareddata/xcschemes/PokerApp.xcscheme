@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F7FA6FBE25A6047F009532C7"
+               BlueprintIdentifier = "F7FA6FDC25A6A3C7009532C7"
                BuildableName = "DeckTest.xctest"
                BlueprintName = "DeckTest"
                ReferencedContainer = "container:PokerApp.xcodeproj">
