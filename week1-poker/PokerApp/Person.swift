@@ -18,7 +18,11 @@ class Person {
         hand.removeAll()
     }
     
-    public func getMyHand() -> [Card] {
-        return hand
+    public func getMyHand() -> String {
+        var myHand: String = ""
+        for card in hand {
+            myHand += card.getInfo() + " "
+        }
+        return myHand
     }
 }

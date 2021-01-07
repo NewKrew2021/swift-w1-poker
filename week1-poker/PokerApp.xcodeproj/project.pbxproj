@@ -15,6 +15,7 @@
 		F7FA6FF625A6DCCD009532C7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FF525A6DCCD009532C7 /* Person.swift */; };
 		F7FA6FFA25A6DD32009532C7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FF925A6DD32009532C7 /* Player.swift */; };
 		F7FA6FFE25A6DD50009532C7 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FFD25A6DD50009532C7 /* Dealer.swift */; };
+		F7FA700225A6F1BE009532C7 /* PokerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA700125A6F1BE009532C7 /* PokerGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 		F7FA6FF525A6DCCD009532C7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F7FA6FF925A6DD32009532C7 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F7FA6FFD25A6DD50009532C7 /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
+		F7FA700125A6F1BE009532C7 /* PokerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				F7FA6FF525A6DCCD009532C7 /* Person.swift */,
 				F7FA6FF925A6DD32009532C7 /* Player.swift */,
 				F7FA6FFD25A6DD50009532C7 /* Dealer.swift */,
+				F7FA700125A6F1BE009532C7 /* PokerGame.swift */,
 			);
 			path = PokerApp;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FA700225A6F1BE009532C7 /* PokerGame.swift in Sources */,
 				F7FA6FEE25A6DA55009532C7 /* Deck.swift in Sources */,
 				F7FA6FF225A6DC16009532C7 /* Card.swift in Sources */,
 				F7FA6FFE25A6DD50009532C7 /* Dealer.swift in Sources */,

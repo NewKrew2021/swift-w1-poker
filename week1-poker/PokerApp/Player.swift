@@ -7,11 +7,14 @@
 
 import Foundation
 class Player: Person {
-    private let id: Int
-    
-    init(id: Int) {
-        self.id = id
+    private let _id: Int
+    public var id: Int {
+        get {
+            return _id
+        }
     }
     
-    
+    init(id: Int) {
+        _id = id
+    }
 }
