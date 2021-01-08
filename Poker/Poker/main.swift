@@ -8,7 +8,7 @@
 import Foundation
 
 
-let table = GameTable(numberOfCard: 5)
+let table = GameTable(numberOfCard: .fiveCards)
 table.enterPlayerInGame(Player(name: "a", money: 10000))
 table.enterPlayerInGame(Player(name: "b", money: 10000))
 table.enterPlayerInGame(Player(name: "c", money: 10000))

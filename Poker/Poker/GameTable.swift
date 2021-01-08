@@ -8,9 +8,12 @@
 import Foundation
 
 class GameTable{
-    //TODO
+    enum KindOfGame: Int{
+        case fiveCards = 5
+        case sevenCard = 7
+    }
     //N - 카드 게임 종류
-    private var numberOfCard: Int
+    private var numberOfCard: KindOfGame
     //딜러 1명
     private let dealer: Dealer = Dealer(name: "Dealer")
     //참가자 1~4명
@@ -18,10 +21,10 @@ class GameTable{
     private var deck: Deck = Deck()
     //남은 카드로 진행이 가능한가? func -> Computed Property
     private var isAvailable: Bool{
-        deck.count >= numberOfCard ? true : false
+        deck.count >= numberOfCard.rawValue ? true : false
     }
     
-    init(numberOfCard: Int) {
+    init(numberOfCard: KindOfGame) {
         self.numberOfCard = numberOfCard
     }
     
@@ -29,7 +32,9 @@ class GameTable{
     func startNewGame(){
         if isAvailable{
             distributeCard()
+            print("총 \(deck.count)장의 카드가 남아있습니다.")
         }else{
+            print("덱에 카드가 존재하지 않습니다. 덱의 카드를 새로 갈아주세요.")
             _ = deck.initCardDeck()
             print("카드 전체를 초기화 했습니다.")
             print("총 \(self.deck.count)장의 카드가 있습니다.")
@@ -43,25 +48,20 @@ class GameTable{
     
     //카드 나눠주기 private
     func distributeCard(){
-        for _ in 1...numberOfCard{
+        for _ in 1...numberOfCard.rawValue{
             if let removeCard = deck.removeOne(){
-                dealer.getCard(card: removeCard)
+                dealer.getCardForDeck(card: removeCard)
                 
                 print(removeCard.description)
-                print("총 \(deck.count)장의 카드가 남아있습니다.")
-            }else{
-                print("덱에 카드가 존재하지 않습니다. 덱의 카드를 새로 갈아주세요.")
             }
         }
-        players.forEach { player in
-            for _ in 1...numberOfCard{
+        
+        for player in players{
+            for _ in 1...numberOfCard.rawValue{
                 if let removeCard = deck.removeOne(){
-                    player.getCard(card: removeCard)
+                    player.getCardForDeck(card: removeCard)
                     
                     print(removeCard.description)
-                    print("총 \(deck.count)장의 카드가 남아있습니다.")
-                }else{
-                    print("덱에 카드가 존재하지 않습니다. 덱의 카드를 새로 갈아주세요.")
                 }
             }
         }
@@ -75,11 +75,12 @@ class GameTable{
         allOfPairs.append(dealer)
         
         allOfPairs.forEach {
-            $0.printCards()
+            print($0.getCards())
+            print($0.getPair())
         }
         
         allOfPairs.sort{
-            $0 > $1
+            $0.pair > $1.pair
         }
         
         return allOfPairs[0].name

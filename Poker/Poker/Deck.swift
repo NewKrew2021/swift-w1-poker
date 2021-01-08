@@ -25,7 +25,7 @@ struct Deck{
             if shape == .joker{
                 continue
             }
-            for cardNum in Card.CardNum.allCases{
+            for cardNum in CardNum.allCases{
                 if cardNum == .joker{
                     continue
                 }

@@ -27,9 +27,7 @@
 		C2E630F525A6E2AA005B2733 /* PlayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E630F425A6E2AA005B2733 /* PlayerTest.swift */; };
 		C2E630FF25A6E2B0005B2733 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E630AE25A6B3FB005B2733 /* Player.swift */; };
 		C2E6310525A6E2B4005B2733 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6307325A6935D005B2733 /* Card.swift */; };
-		C2E6310C25A6E46B005B2733 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6310B25A6E46B005B2733 /* Util.swift */; };
-		C2E6311225A6E502005B2733 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6310B25A6E46B005B2733 /* Util.swift */; };
-		C2E6311825A6EDD2005B2733 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6310B25A6E46B005B2733 /* Util.swift */; };
+		C2E6314125A80976005B2733 /* CardNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6314025A80976005B2733 /* CardNum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,7 +62,7 @@
 		C2E630F225A6E2AA005B2733 /* PlayerTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E630F425A6E2AA005B2733 /* PlayerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTest.swift; sourceTree = "<group>"; };
 		C2E630F625A6E2AA005B2733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2E6310B25A6E46B005B2733 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		C2E6314025A80976005B2733 /* CardNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,13 +131,13 @@
 		C2E6304A25A5595C005B2733 /* Poker */ = {
 			isa = PBXGroup;
 			children = (
+				C2E6313F25A80969005B2733 /* Enum */,
 				C2E6304B25A5595C005B2733 /* main.swift */,
 				C2E6307325A6935D005B2733 /* Card.swift */,
 				C2E6308925A69C29005B2733 /* Deck.swift */,
 				C2E630A925A6B3F3005B2733 /* GameTable.swift */,
 				C2E630AE25A6B3FB005B2733 /* Player.swift */,
 				C2E630B325A6B41C005B2733 /* Dealer.swift */,
-				C2E6310B25A6E46B005B2733 /* Util.swift */,
 			);
 			path = Poker;
 			sourceTree = "<group>";
@@ -178,6 +176,14 @@
 				C2E630F625A6E2AA005B2733 /* Info.plist */,
 			);
 			path = PlayerTest;
+			sourceTree = "<group>";
+		};
+		C2E6313F25A80969005B2733 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				C2E6314025A80976005B2733 /* CardNum.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,9 +360,9 @@
 			files = (
 				C2E630AA25A6B3F3005B2733 /* GameTable.swift in Sources */,
 				C2E6308A25A69C29005B2733 /* Deck.swift in Sources */,
+				C2E6314125A80976005B2733 /* CardNum.swift in Sources */,
 				C2E630B425A6B41C005B2733 /* Dealer.swift in Sources */,
 				C2E6304C25A5595C005B2733 /* main.swift in Sources */,
-				C2E6310C25A6E46B005B2733 /* Util.swift in Sources */,
 				C2E630AF25A6B3FB005B2733 /* Player.swift in Sources */,
 				C2E6307425A6935D005B2733 /* Card.swift in Sources */,
 			);
@@ -389,7 +395,6 @@
 				C2E630E125A6D466005B2733 /* Card.swift in Sources */,
 				C2E630CD25A6D239005B2733 /* Deck.swift in Sources */,
 				C2E630C825A6D233005B2733 /* GameTable.swift in Sources */,
-				C2E6311825A6EDD2005B2733 /* Util.swift in Sources */,
 				C2E630D725A6D23D005B2733 /* Dealer.swift in Sources */,
 				C2E630BF25A6D22B005B2733 /* GameTableTest.swift in Sources */,
 			);
@@ -402,7 +407,6 @@
 				C2E630FF25A6E2B0005B2733 /* Player.swift in Sources */,
 				C2E6310525A6E2B4005B2733 /* Card.swift in Sources */,
 				C2E630F525A6E2AA005B2733 /* PlayerTest.swift in Sources */,
-				C2E6311225A6E502005B2733 /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

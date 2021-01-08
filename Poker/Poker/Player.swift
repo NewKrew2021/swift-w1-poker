@@ -9,14 +9,14 @@ import Foundation
 
 class Player{
     struct Pair{
-        var num: Int
+        var num: CardNum
         var duplicate: Int
     }
     
     let name: String
     private var cards: [Card] = []
     private var money: Int?
-    private var pair: Pair = Pair(num: 0, duplicate: 0)
+    var pair: Pair = Pair(num: .none, duplicate: 0)
     
     init(name: String) {
         self.name = name
@@ -26,33 +26,28 @@ class Player{
         self.money = money
     }
     
-    func getCard(card: Card){
+    func getCardForDeck(card: Card){
         self.cards.append(card)
     }
     
     //정렬된 카드 출력
-    func printCards(){
+    func getCards() -> String{
         self.cards.sort {
             $0 < $1
         }
-        print("Name : \(name)", terminator: " ")
-        print(self.cards.reduce("Cards: "){ "\($0.description), \($1.description)" })
         
-        printPairs(pair: getPair())
+        return self.cards.reduce("Cards: "){ "\($0.description), \($1.description)" }
     }
     
     //가장 높은 족보 출력
-    func getPair() -> Pair{
+    func getPair() -> String{
         var pairs = numberOfPairs()
         pairs.sort{
             $0 > $1
         }
-        self.pair = pairs.first ?? Pair(num: 0, duplicate: 0)
-        return self.pair
-    }
-    
-    private func printPairs(pair: Pair){
-        print(pair.description)
+        self.pair = pairs.first ?? Pair(num: .none, duplicate: 0)
+        
+        return self.pair.description
     }
     
     //Player의 갖고 있는 페어 확인
@@ -61,10 +56,10 @@ class Player{
         var countOfDuplicate = 0 // 중복횟수
         
         for index in 0 ..< self.cards.count - 1{
-            let number = self.cards[index].num.rawValue
-            let next = self.cards[index + 1].num.rawValue
+            let number = self.cards[index].num
+            let next = self.cards[index + 1].num
             
-            if number == next{
+            if number.rawValue == next.rawValue{
                 //중복 횟수 ++
                 countOfDuplicate += 1
                 if index == self.cards.count - 2{
@@ -88,7 +83,7 @@ extension Player.Pair: Comparable{
         if lhs.duplicate != rhs.duplicate{
             return lhs.duplicate < rhs.duplicate
         }else{
-            return lhs.num < rhs.num
+            return lhs.num.rawValue < rhs.num.rawValue
         }
     }
     
@@ -97,25 +92,11 @@ extension Player.Pair: Comparable{
             return "페어가 없습니다."
         }
         else if self.duplicate == 1{
-            return "원페어 - \(Util.convertFromNumToString(num: self.num))"
+            return "원페어 - \(self.num.convertFromNumToString())"
         } else if self.duplicate == 2{
-            return "트리플 - \(Util.convertFromNumToString(num: self.num))"
+            return "트리플 - \(self.num.convertFromNumToString())"
         } else{
-            return "포카드 - \(Util.convertFromNumToString(num: self.num))"
-        }
-    }
-}
-
-extension Player: Comparable, Equatable{
-    static func == (lhs: Player, rhs: Player) -> Bool {
-        (lhs.pair.num == rhs.pair.num) && (lhs.pair.duplicate == rhs.pair.duplicate)
-    }
-    
-    static func <(lhs: Player, rhs: Player) -> Bool{
-        if lhs.pair.duplicate != rhs.pair.duplicate{
-            return lhs.pair.duplicate < rhs.pair.duplicate
-        }else{
-            return lhs.pair.num < rhs.pair.num
+            return "포카드 - \(self.num.convertFromNumToString())"
         }
     }
 }

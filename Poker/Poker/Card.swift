@@ -17,11 +17,7 @@ struct Card{
         case joker = "🃏"
     }
     
-    enum CardNum: Int, CaseIterable{
-        case joker = 0
-        case one, two, three, four, five, six, seven, eight, nine, ten
-        case jack, queen, king
-    }
+    
     
     //can't change card's shape and num
     private(set) var shape: Shape
@@ -37,7 +33,7 @@ struct Card{
     }
     
     private func convertNumToString() -> String{
-        return Util.convertFromNumToString(num: num.rawValue)
+        return num.convertFromNumToString()
     }
     
 }
@@ -57,5 +53,6 @@ extension Card: Comparable{
         }
     }
 }
+
 
 
