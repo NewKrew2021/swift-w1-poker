@@ -16,38 +16,60 @@ class Card {
     }
     
     // enum이 쓰기 쉬워서..
-    enum Shapes : String {
-        case spade = "♠"
-        case heart = "♥"
-        case diamond = "◆"
-        case club = "♣"
-
+    enum Shapes : Int {
+        case spade = 1, heart, diamond, club
         static let shapes = [spade, heart, diamond, club]
     }
     
-    enum Numbers : String {
-        case ace = "A"
-        case two = "2"
-        case three = "3"
-        case four = "4"
-        case five = "5"
-        case six = "6"
-        case seven = "7"
-        case eight = "8"
-        case nine = "9"
-        case ten = "10"
-        case eleven = "J"
-        case twelve = "Q"
-        case thirteen = "K"
-
+    enum Numbers : Int {
+        case ace = 1, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen
         static let numbers = [ace, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen]
     }
     
-    //func == (shape : shape, number : number) -> bool {
-     //   return (self.shape == shape && self.number == self.number)
-    //}
+    func equals(compareCard : Card) -> Bool {
+        return ( self.shape == compareCard.shape && self.number == compareCard.number )
+    }
+    
+    static func ==(lhs: Card, rhs: Card) -> Bool {
+        return lhs.number == rhs.number
+    }
+    
+    static func <(lhs: Card, rhs: Card) -> Bool {
+        return lhs.number.rawValue < rhs.number.rawValue
+    }
+    
+    var shapeText : String {
+        switch self.shape {
+            case .spade:
+                return "♠"
+            case .heart:
+                return "♥"
+            case .diamond :
+                return "◆"
+            case .club:
+                return "♣"
+        }
+        
+    }
+    
+    var numberText : String{
+        switch self.number {
+            case .ace:
+                return  "A"
+            case .eleven:
+                return "J"
+            case .twelve:
+                return "Q"
+            case .thirteen:
+                return "K"
+            default:
+                return String(self.number.rawValue)
+        }
+        
+    }
+    
     var description : String {
-        return self.shape.rawValue + self.number.rawValue
+        return "\(shapeText)\(numberText)"
     }
 }
 
