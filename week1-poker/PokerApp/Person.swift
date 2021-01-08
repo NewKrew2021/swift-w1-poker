@@ -21,7 +21,7 @@ class Person {
     public func getMyHand() -> String {
         var myHand: String = "["
         for card in hand {
-            myHand += card.getInfo() + ", "
+            myHand += String(describing: card) + ", "
         }
         myHand.removeLast()
         myHand.removeLast()

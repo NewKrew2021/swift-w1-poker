@@ -8,7 +8,16 @@
 import Foundation
 
 class Deck{
-    public var cards: [Card] = []
+    private(set) var _cards: [Card] = []
+    public var cards: [Card] {
+        get {
+            return _cards
+        }
+        set {
+            _cards = newValue
+        }
+    }
+    
     public var count: Int {
         get {
             cards.count
@@ -20,9 +29,6 @@ class Deck{
     }
     
     public func shuffle() {
-        //Fisher-Yates
-//        cards.shuffle()
-        
         //Knuth
         for i in 0..<count - 1 { // 0 ~ n-2
             let randomIndex = Int.random(in: i..<count)
@@ -39,13 +45,13 @@ class Deck{
     
     public func reset() -> Bool {
         cards.removeAll(keepingCapacity: false)
-        for rank in 1...13 {
+        for rank in CardRank.allCases {
             cards.append(Card(shape: .clubs, rank: rank))
             cards.append(Card(shape: .spades, rank: rank))
             cards.append(Card(shape: .diamonds, rank: rank))
             cards.append(Card(shape: .hearts, rank: rank))
         }
-        cards.append(Card(shape: .joker, rank: 0))
+        cards.append(Card(shape: .joker, rank: nil))
         return count == 53 ? true : false
     }
 }

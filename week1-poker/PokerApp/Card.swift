@@ -11,24 +11,30 @@ enum CardShape: Character{
     case hearts = "♥️", diamonds = "♦️", spades = "♠️", clubs = "♣️", joker = "🃏"
 }
 
+enum CardRank: String, CaseIterable {
+   case one = "A", two = "2", three = "3", four = "4", five = "5", six = "6", seven = "7", eight = "8", nine = "9", ten = "10", eleven = "J", twelve = "Q", thirteen = "K"
+}
 
 class Card : Equatable{
     private let shape: CardShape
-    private let rank: String
-    //카드덱에서 객체 만드는 것을 간편하게 하기위해 사용
-    private let CardRanks = ["", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+    private let rank: CardRank?
     
-    public init(shape: CardShape, rank: Int){
+    public init(shape: CardShape, rank: CardRank?){
         self.shape = shape
-        self.rank = CardRanks[rank]
-    }
-    
-    public func getInfo() -> String {
-        let info: String = "\(shape.rawValue)\(rank)"
-        return info
+        self.rank = rank
     }
     
     static func == (lhs: Card, rhs: Card) -> Bool {
         return lhs.rank == rhs.rank && lhs.shape == rhs.shape
+    }
+}
+
+extension Card : CustomStringConvertible {
+    var description: String {
+        var desc: String = String(shape.rawValue)
+        if let ran = rank {
+            desc += ran.rawValue
+        }
+        return desc
     }
 }

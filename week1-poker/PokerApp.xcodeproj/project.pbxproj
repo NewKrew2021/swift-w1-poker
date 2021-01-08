@@ -16,6 +16,12 @@
 		F7FA6FFA25A6DD32009532C7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FF925A6DD32009532C7 /* Player.swift */; };
 		F7FA6FFE25A6DD50009532C7 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FFD25A6DD50009532C7 /* Dealer.swift */; };
 		F7FA700225A6F1BE009532C7 /* PokerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA700125A6F1BE009532C7 /* PokerGame.swift */; };
+		F7FA701725A7F302009532C7 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FED25A6DA55009532C7 /* Deck.swift */; };
+		F7FA701A25A7F344009532C7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FF125A6DC16009532C7 /* Card.swift */; };
+		F7FA701D25A7F347009532C7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FF525A6DCCD009532C7 /* Person.swift */; };
+		F7FA702025A7F364009532C7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FF925A6DD32009532C7 /* Player.swift */; };
+		F7FA702325A7F367009532C7 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA6FFD25A6DD50009532C7 /* Dealer.swift */; };
+		F7FA702425A7F368009532C7 /* PokerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FA700125A6F1BE009532C7 /* PokerGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -205,8 +211,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FA701D25A7F347009532C7 /* Person.swift in Sources */,
+				F7FA701725A7F302009532C7 /* Deck.swift in Sources */,
+				F7FA702325A7F367009532C7 /* Dealer.swift in Sources */,
 				F7FA6FE725A6A3E5009532C7 /* main.swift in Sources */,
 				F7FA6FE025A6A3C7009532C7 /* DeckTest.swift in Sources */,
+				F7FA702425A7F368009532C7 /* PokerGame.swift in Sources */,
+				F7FA702025A7F364009532C7 /* Player.swift in Sources */,
+				F7FA701A25A7F344009532C7 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

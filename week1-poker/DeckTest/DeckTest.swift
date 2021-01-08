@@ -9,14 +9,10 @@ import XCTest
 
 class DeckTest: XCTestCase {
 
-    let deck = Deck()
+    var deck: Deck = Deck()
     
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        deck = Deck()
     }
 
     func testDeckReset() throws {
@@ -32,19 +28,19 @@ class DeckTest: XCTestCase {
     
     func testCount() throws {
         //test시에만 Deck의 cards를 public으로 사용
-        XCTAssertEqual(deck.cards.count, deck.count())
+        XCTAssertEqual(deck.cards.count, deck.count)
     }
     
     func testCountAfterRemoveOne() throws {
         deck.removeOne()
-        XCTAssertEqual(deck.cards.count, deck.count())
+        XCTAssertEqual(deck.cards.count, deck.count)
     }
     
     func testCountWithNoCards() throws {
-        for _ in 0..<deck.count(){
+        for _ in 0..<deck.count{
             deck.removeOne()
         }
-        XCTAssertEqual(0, deck.count())
+        XCTAssertEqual(0, deck.count)
     }
     
     func testRemoveOneSuccess() throws {
@@ -53,7 +49,7 @@ class DeckTest: XCTestCase {
     }
     
     func testRemoveOneFail() throws {
-        for _ in 0..<deck.count(){
+        for _ in 0..<deck.count{
             deck.removeOne()
         }
         let card = deck.removeOne()
