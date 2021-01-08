@@ -25,9 +25,9 @@ var player6 = Player(id: 6)
 var dealer = Dealer()
 
 var game = Poker(dealer: dealer)
-game.addPlayer(player: player1)
-game.addPlayer(player: player2)
-game.addPlayer(player: player3)
-game.addPlayer(player: player4)
+game.addGamer(gamer: player1)
+//game.addGamer(gamer: player2)
+game.addGamer(gamer: player3)
+//game.addGamer(gamer: player4)
 
 game.startGame()

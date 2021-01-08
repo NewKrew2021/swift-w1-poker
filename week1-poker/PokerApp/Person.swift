@@ -8,7 +8,15 @@
 import Foundation
 
 class Person {
-    private var hand: [Card] = []
+    private var _hand: [Card] = []
+    public var hand: [Card] {
+        get{
+            return _hand
+        }
+        set {
+            _hand = newValue
+        }
+    }
     
     public func getNewCard(card: Card) {
         hand.append(card)

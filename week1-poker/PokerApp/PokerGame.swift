@@ -12,49 +12,54 @@ class Poker {
         case SevenCardStud, FiveCardStud
     }
     
-    private var dealer: Dealer
-    private var players: [Player] = []
-    private var gameType: GameTypes = .FiveCardStud
-    private var numOfRequiredCards : Int = 0
+    public var dealer: Dealer
+    private var _gamers: [Person]
+    public var gamers: [Person] {
+        get {
+            return _gamers
+        }
+        set {
+            _gamers = newValue
+        }
+    }
+    public var gameType: GameTypes = .FiveCardStud
+    private var numOfRequiredCards: Int = 0
+    public var canAddPlayer: Bool {
+        get {
+            return gamers.count >= 5 ? false : true
+        }
+    }
+    public var canPlayGame: Bool {
+        get {
+            return gamers.count > 1 && dealer.count >= numOfRequiredCards ? true : false
+        }
+    }
     
     init(dealer: Dealer) {
         self.dealer = dealer
+        _gamers = [dealer]
     }
     
-    public func setDealer(dealer: Dealer) {
-        self.dealer = dealer
-    }
-    
-    public func setGameType(gameType: GameTypes) {
-        self.gameType = gameType
-    }
-    
-    public func addPlayer(player: Player) -> Bool {
-        if canAddPlayer() {
-            players.append(player)
-            return true
+    public func addGamer(gamer: Person){
+        if canAddPlayer {
+            gamers.append(gamer)
         }
-        return false
     }
     
-    private func canAddPlayer() -> Bool {
-        return players.count >= 4 ? false : true
-    }
-    
-    public func startGame() -> Bool {
+    public func startGame(){
         switch gameType {
         case .FiveCardStud:
-            numOfRequiredCards += 5
+            numOfRequiredCards = 5 * gamers.count
         case .SevenCardStud:
-            numOfRequiredCards += 7
+            numOfRequiredCards = 7 * gamers.count
         }
         
-        if !canPlayGame() {
-            return false
+        if !canPlayGame {
+            return
         }
         
-        while canPlayGame() {
-            removeAllCardsOfPlayers()
+        while canPlayGame {
+            removeAllCardsOfGamers()
             switch gameType {
             case .FiveCardStud:
                 fiveCardStud()
@@ -62,51 +67,43 @@ class Poker {
                 sevenCardStud()
             }
         }
-        
-        return (53 - dealer.count) % numOfRequiredCards == 0 ? true : false
-    }
-    
-    private func canPlayGame() -> Bool {
-        return isPlayerExist() && dealer.count >= numOfRequiredCards ? true : false
-    }
-    
-    private func isPlayerExist() -> Bool {
-        return players.count > 0 ? true : false
     }
     
     private func sevenCardStud() {
         for _ in 0..<7{
-            for player in players {
-                dealer.giveCard(to: player)
+            for gamer in gamers {
+                dealer.giveCard(to: gamer)
             }
-            dealer.giveCard(to: dealer)
         }
         showCards()
     }
     
     private func fiveCardStud() {
         for _ in 0..<5{
-            for player in players {
-                dealer.giveCard(to: player)
+            for gamer in gamers {
+                dealer.giveCard(to: gamer)
             }
-            dealer.giveCard(to: dealer)
         }
         showCards()
     }
     
-    private func removeAllCardsOfPlayers() {
-        for player in players {
-            player.removeAllCards()
+    private func removeAllCardsOfGamers() {
+        for gamer in gamers {
+            gamer.removeAllCards()
         }
-        dealer.removeAllCards()
     }
     
     private func getStatus() -> String {
         var status: String = "[현재 카드 상황]\n\n"
-        for player in players {
-            status += "플레이어#\(String(player.id)) \(player.getMyHand())\n"
+        for gamer in gamers {
+            if let player = gamer as? Player {
+                status += "플레이어#\(String(player.id))"
+            }
+            else{
+                status += "딜러\t\t "
+            }
+            status += "\(gamer.getMyHand())\n"
         }
-        status += "딜러\t\t \(dealer.getMyHand())\n"
         return status
     }
     
