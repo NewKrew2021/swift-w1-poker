@@ -8,41 +8,16 @@
 import Foundation
 
 struct Game {
-    enum Input : String {
-        case card = "카드의 개수를 입력해주세요(5 / 7)\n >>"
-        case player = "참가자의 수를 입력해주세요(1 ~ 4)\n >>"
-        case error = "잘못된 입력입니다."
-    }
     
     private var deck = Deck()
     private var players = [Player]()
+    private let output = Output()
+    private let input = Input()
     
-    func input() -> (Int, Int) {
-        let cardNum = chooseCard()
-        let playerNum = choosePlayer()
+    func getCardAndPlayerCount() -> (Int, Int) {
+        let cardNum = input.inputChooseCard()
+        let playerNum = input.inputChoosePlayer()
         return (cardNum, playerNum)
-    }
-    
-    private func chooseCard() -> Int {
-        print(Input.card.rawValue, terminator:"")
-        let cardNum : Int? = Int(readLine() ?? "") ?? 0
-        if (cardNum == 5 || cardNum == 7) {
-            return cardNum ?? 5
-        } else {
-            print(Input.error.rawValue)
-            return chooseCard()
-        }
-    }
-    
-    private func choosePlayer() -> Int {
-        print(Input.player.rawValue, terminator:"")
-        let playerNum : Int? = Int(readLine() ?? "") ?? 0
-        if ((playerNum ?? 0) >= 1 && (playerNum ?? 0) <= 4) {
-            return playerNum ?? 1
-        } else {
-            print(Input.error.rawValue)
-            return choosePlayer()
-        }
     }
     
     mutating func makePlayer(playerNum:Int) {
@@ -63,12 +38,6 @@ struct Game {
         }
     }
     
-    func printHand() {
-        for player in players {
-            print("\(player) \(player.getHandString())")
-        }
-    }
-    
     func playerCount() -> Int {
         return self.players.count
     }
@@ -79,5 +48,13 @@ struct Game {
         } else {
             return self.players[index].handCount()
         }
+    }
+    
+    func startGame() {
+        var maxScore : Float = 0
+        for player in players {
+            maxScore = max(maxScore, player.getScore())
+        }
+        output.printHand(players: self.players, maxScore: maxScore)
     }
 }

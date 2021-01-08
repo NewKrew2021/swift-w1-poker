@@ -8,33 +8,35 @@
 import Foundation
 
 class Player : CustomStringConvertible {
-    private var hand = [Card]()
+    private var hand = Hand()
+    private var score : Float = 0
     
     func removeHand() {
         hand.removeAll()
     }
     
     func getCard(card:Card) {
-        hand.append(card)
+        hand.plusCard(card: card)
     }
     
     var description: String {
         return ""
     }
     
-    func getHandString() -> String {
-        var str = "["
-        for i in 0..<hand.count {
-            if i == hand.count - 1 {
-                str += "\(hand[i])]"
-            } else {
-                str += "\(hand[i]), "
-            }
+    func getHandString(maxScore:Float) -> String {
+        if self.score == maxScore {
+            return "\(hand) \(score) <== 승자"
+        } else {
+            return "\(hand) \(score)"
         }
-        return str
     }
     
     func handCount() -> Int {
-        return self.hand.count
+        return self.hand.count()
+    }
+    
+    func getScore() -> Float {
+        self.score =  hand.calculateScore()
+        return self.score
     }
 }

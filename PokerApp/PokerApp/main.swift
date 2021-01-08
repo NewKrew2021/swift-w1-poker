@@ -8,7 +8,7 @@
 import Foundation
 
 var game = Game()
-let input : (Int, Int) = game.input()
+var input : (Int, Int) = game.getCardAndPlayerCount()
 game.makePlayer(playerNum: input.1)
 game.giveCard(cardNum: input.0)
-game.printHand()
+game.startGame()
