@@ -30,12 +30,12 @@
       codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F7FA6FDC25A6A3C7009532C7"
-               BuildableName = "DeckTest.xctest"
-               BlueprintName = "DeckTest"
+               BuildableName = "test.xctest"
+               BlueprintName = "test"
                ReferencedContainer = "container:PokerApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,19 +43,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F7FA702A25A816D1009532C7"
-               BuildableName = "PersonTest.xctest"
-               BlueprintName = "PersonTest"
-               ReferencedContainer = "container:PokerApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F782FAD125A821AE00125AEA"
-               BuildableName = "GameTest.xctest"
-               BlueprintName = "GameTest"
+               BlueprintIdentifier = "F782FB2D25A862AF00125AEA"
+               BuildableName = "PokerTest.xctest"
+               BlueprintName = "PokerTest"
                ReferencedContainer = "container:PokerApp.xcodeproj">
             </BuildableReference>
          </TestableReference>

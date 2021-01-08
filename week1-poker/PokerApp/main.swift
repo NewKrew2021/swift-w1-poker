@@ -7,6 +7,11 @@
 
 import Foundation
 
+
+var asd = CardRank.allCases.map({$0})
+print(asd)
+
+
 let deck = Deck()
 
 deck.shuffle()
@@ -22,6 +27,7 @@ var player6 = Player(id: 6)
 var dealer = Dealer()
 
 var game = Poker(dealer: dealer)
+game.gameType = .SevenCardStud
 game.addGamer(gamer: player1)
 //game.addGamer(gamer: player2)
 game.addGamer(gamer: player3)
@@ -30,3 +36,5 @@ game.addGamer(gamer: player3)
 game.startGame()
 
 game.startGame()
+
+//PokerScoreMachine.isFourCard(hand: player3.hand)

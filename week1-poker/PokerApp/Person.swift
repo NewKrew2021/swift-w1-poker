@@ -17,6 +17,7 @@ class Person {
             _hand = newValue
         }
     }
+    public var score: Int = 0
     
     public func getNewCard(card: Card) {
         hand.append(card)
