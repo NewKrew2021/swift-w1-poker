@@ -19,10 +19,13 @@ class Person {
     }
     
     public func getMyHand() -> String {
-        var myHand: String = ""
+        var myHand: String = "["
         for card in hand {
-            myHand += card.getInfo() + " "
+            myHand += card.getInfo() + ", "
         }
+        myHand.removeLast()
+        myHand.removeLast()
+        myHand += "]"
         return myHand
     }
 }

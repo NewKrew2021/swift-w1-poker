@@ -9,13 +9,14 @@ import Foundation
 
 class Deck{
     public var cards: [Card] = []
+    public var count: Int {
+        get {
+            cards.count
+        }
+    }
     
     public init(){
         reset()
-    }
-    
-    public func count() -> Int {
-        return cards.count
     }
     
     public func shuffle() {
@@ -23,18 +24,14 @@ class Deck{
 //        cards.shuffle()
         
         //Knuth
-        for i in 0..<cards.count - 1 { // 0 ~ n-2
-            let randomIndex = Int.random(in: i..<cards.count)
+        for i in 0..<count - 1 { // 0 ~ n-2
+            let randomIndex = Int.random(in: i..<count)
               
             let temp = cards[i]
             cards[i] = cards[randomIndex]
             cards[randomIndex] = temp
         }
     }
-    
-    //    public func removeOne(card: Card){
-    //
-    //    }
     
     public func removeOne() -> Card? {
         return cards.popLast()
@@ -49,6 +46,6 @@ class Deck{
             cards.append(Card(shape: .hearts, rank: rank))
         }
         cards.append(Card(shape: .joker, rank: 0))
-        return cards.count == 53 ? true : false
+        return count == 53 ? true : false
     }
 }

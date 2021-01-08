@@ -10,7 +10,7 @@ class Dealer: Person{
     private var deck: Deck = Deck()
     public var count: Int {
         get {
-            deck.count()
+            deck.count
         }
     }
     
