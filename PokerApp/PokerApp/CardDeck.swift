@@ -45,8 +45,6 @@ class CardDeck {
     }
     
     func reset() -> [Card] {
-        //전부 다 지우고 해야할 거 같은데?
-        //메모리 생각해볼것
         self.cards = CardDeck().cards
         return self.cards
     }
