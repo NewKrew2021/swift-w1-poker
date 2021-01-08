@@ -7,19 +7,15 @@
 //
 import Foundation
 
-let numOfUser = 3
+let numOfUser = 4
 
 do {
-    let poker: Poker = try Poker(type: Poker.GameType.five, numOfUser: numOfUser)
-    print(poker.dealer.cards)
-    for i in 0..<numOfUser {
-        print(poker.users[i].cards)
+    let poker: PokerPlay = try PokerPlay(type: PokerPlay.GameType.five, numOfUser: numOfUser)
+    if let winner = poker.whoIsWinner() {
+        let presenter: PokerPlayPresenter = PokerPlayPresenter(gamePlayer: poker.gamePlayer, winner: winner)
+        presenter.printResult()
     }
     
 } catch {
     print(error)
 }
-
-
-
-
