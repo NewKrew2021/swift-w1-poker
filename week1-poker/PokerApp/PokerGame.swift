@@ -47,6 +47,8 @@ class Poker {
     }
     
     public func startGame(){
+        dealer.deck.reset()
+        dealer.deck.shuffle()
         switch gameType {
         case .FiveCardStud:
             numOfRequiredCards = 5 * gamers.count

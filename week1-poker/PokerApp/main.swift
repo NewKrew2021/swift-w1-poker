@@ -11,9 +11,6 @@ let deck = Deck()
 
 deck.shuffle()
 
-if let card = deck.removeOne() {
-    print(card)
-}
 
 var player1 = Player(id: 1)
 var player2 = Player(id: 2)
@@ -29,5 +26,7 @@ game.addGamer(gamer: player1)
 //game.addGamer(gamer: player2)
 game.addGamer(gamer: player3)
 //game.addGamer(gamer: player4)
+
+game.startGame()
 
 game.startGame()

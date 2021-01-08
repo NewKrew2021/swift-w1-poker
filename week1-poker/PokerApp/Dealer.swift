@@ -7,7 +7,7 @@
 
 import Foundation
 class Dealer: Person{
-    private var deck = Deck()
+    public var deck = Deck()
     public var count: Int {
         get {
             deck.count
