@@ -6,13 +6,27 @@
 	<dict>
 		<key>DeckTest.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>PokerApp.xcscheme_^#shared#^_</key>
+		<key>PersonTest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>PokerApp.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>PokerTest.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>week1-poker.xcscheme_^#shared#^_</key>
 		<dict>
@@ -22,6 +36,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F782FAD125A821AE00125AEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F7FA6F7C25A55790009532C7</key>
 		<dict>
 			<key>primary</key>

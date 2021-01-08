@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F7FA6FDC25A6A3C7009532C7"
-               BuildableName = "DeckTest.xctest"
-               BlueprintName = "DeckTest"
+               BuildableName = "test.xctest"
+               BlueprintName = "test"
                ReferencedContainer = "container:PokerApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
